@@ -1,0 +1,365 @@
+--- MENU ---
+AiCodeCat
+首页
+订阅套餐
+状态页
+模型价格
+使用文档
+联系客服
+开始使用
+使用文档
+/
+Claude Code
+/
+Windows
+DOC-01
+
+按客户端与系统整理的使用指南，便于快速查找与复用。
+
+客户端目录
+配置教程
+Claude Code
+Gemini CLI
+Codex
+OpenClaw
+Droid CLI
+Cherry Studio
+OpenCode 配置
+使用教程
+Claude Code 使用教程
+Codex CLI 使用教程
+OpenCode 使用教程
+站长精选
+1. 安装 Node.js
+
+Claude Code 需要 Node.js 环境才能运行。
+最低要求：Node.js >=18（建议 LTS）。
+
+方法一：官网下载（推荐）
+访问 Node.js官网 下载 LTS 版本
+双击安装包并按向导完成安装
+方法二：包管理器安装
+# Chocolatey
+choco install nodejs
+
+# Scoop
+scoop install nodejs
+
+复制
+验证安装
+node --version
+npm --version
+
+复制
+
+TIP
+
+建议使用 PowerShell；如遇权限问题可尝试以管理员身份运行。
+
+2. 安装 Claude Code
+npm install -g @anthropic-ai/claude-code
+
+复制
+
+验证安装：
+
+claude --version
+
+复制
+3. 配置 API 连接
+方法一：配置文件（推荐）
+
+在用户目录下创建 .claude 文件夹和 settings.json 配置文件：
+
+配置文件路径：
+
+C:\Users\<你的用户名>\.claude\settings.json
+
+复制
+
+配置内容：
+
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "你的API密钥",
+    "ANTHROPIC_BASE_URL": "https://aicode.cat"
+  }
+}
+
+复制
+
+创建步骤
+
+打开文件资源管理器，进入 C:\Users\<你的用户名>\ 目录
+新建文件夹 .claude（如已存在则跳过）
+在 .claude 文件夹中新建文件 settings.json
+将上述配置内容粘贴到文件中并保存
+方法二：环境变量
+
+如果不想使用配置文件，也可以通过环境变量配置：
+
+PowerShell 临时设置（当前会话）
+$env:ANTHROPIC_BASE_URL = "https://aicode.cat"
+$env:ANTHROPIC_AUTH_TOKEN = "你的API密钥"
+
+复制
+PowerShell 永久设置（用户级）
+[System.Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://aicode.cat", [System.EnvironmentVariableTarget]::User)
+[System.Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "你的API密钥", [System.EnvironmentVariableTarget]::User)
+
+复制
+验证环境变量
+$env:ANTHROPIC_BASE_URL
+$env:ANTHROPIC_AUTH_TOKEN
+
+复制
+
+WARNING
+
+请将"你的API密钥"替换为用户仪表盘中创建的实际密钥。
+
+重启提示
+
+配置完成后需要重启终端才能生效。如果在 VS Code / Cursor 等 IDE 的集成终端中使用，需要彻底重启整个 IDE（不只是重启终端），否则配置可能不会生效。
+
+VSCode 插件配置（可选）
+
+如果使用 VSCode 的 Claude 插件，需要额外配置插件认证文件：
+
+配置文件路径：
+
+C:\Users\<你的用户名>\.claude\config.json
+
+复制
+
+配置内容：
+
+{
+  "primaryApiKey": "any"
+}
+
+复制
+
+创建步骤
+
+打开文件资源管理器，进入 C:\Users\<你的用户名>\.claude\ 目录
+如果 .claude 文件夹不存在，请先创建（参考上面的方法一）
+在 .claude 文件夹中新建文件 config.json
+将上述配置内容粘贴到文件中并保存
+
+WARNING
+
+注意：这是 VSCode 插件专用的配置文件（config.json），与 Claude Code 命令行工具的配置文件（settings.json）是两个不同的文件。
+
+4. 开始使用
+claude
+
+复制
+
+可运行 claude --help 查看支持的命令。
+
+5. 常见问题排查
+问题 1：Unable to connect to Anthropic services
+
+症状：
+启动 Claude Code 后提示无法连接到 Anthropic 服务。
+
+解决方案：
+
+这个问题通常是因为首次启动引导未完成。需要在用户根目录创建 .claude.json 文件并跳过引导流程：
+
+配置文件路径：
+
+C:\Users\<你的用户名>\.claude.json
+
+复制
+
+配置内容：
+
+{
+  "hasCompletedOnboarding": true
+}
+
+复制
+
+创建步骤
+
+打开文件资源管理器，进入 C:\Users\<你的用户名>\ 目录
+新建文件 .claude.json（注意是在用户根目录，不是 .claude 文件夹内）
+将上述配置内容粘贴到文件中并保存
+重启 Claude Code
+
+调试技巧
+
+如果配置后仍然无法连接，可以：
+
+检查网络连接是否正常
+重启终端或 IDE 后再次尝试
+确认 API Key 配置正确（参考上面"3. 配置 API 连接"章节）
+AiCodeCat
+
+我们一起，使用顶级的 AI 大模型并刻意练习使用它的能力
+
+加客服加入学习交流群。
+
+--- FOUND LINKS ---
+[ { href: 'https://aicode.cat/m/tutorial', text: '使用文档' } ]
+
+--- PAGE CONTENTS ---
+URL: https://aicode.cat/m/tutorial
+
+使用文档
+/
+Claude Code
+/
+Windows
+DOC-01
+
+按客户端与系统整理的使用指南，便于快速查找与复用。
+
+客户端目录
+配置教程
+Claude Code
+Gemini CLI
+Codex
+OpenClaw
+Droid CLI
+Cherry Studio
+OpenCode 配置
+使用教程
+Claude Code 使用教程
+Codex CLI 使用教程
+OpenCode 使用教程
+站长精选
+1. 安装 Node.js
+
+Claude Code 需要 Node.js 环境才能运行。
+最低要求：Node.js >=18（建议 LTS）。
+
+方法一：官网下载（推荐）
+访问 Node.js官网 下载 LTS 版本
+双击安装包并按向导完成安装
+方法二：包管理器安装
+# Chocolatey
+choco install nodejs
+
+# Scoop
+scoop install nodejs
+
+复制
+验证安装
+node --version
+npm --version
+
+复制
+
+TIP
+
+建议使用 PowerShell；如遇权限问题可尝试以管理员身份运行。
+
+2. 安装 Claude Code
+npm install -g @anthropic-ai/claude-code
+
+复制
+
+验证安装：
+
+claude --version
+
+复制
+3. 配置 API 连接
+方法一：配置文件（推荐）
+
+在用户目录下创建 .claude 文件夹和 settings.json 配置文件：
+
+配置文件路径：
+
+C:\Users\<你的用户名>\.claude\settings.json
+
+复制
+
+配置内容：
+
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "你的API密钥",
+    "ANTHROPIC_BASE_URL": "https://aicode.cat"
+  }
+}
+
+复制
+
+创建步骤
+
+打开文件资源管理器，进入 C:\Users\<你的用户名>\ 目录
+新建文件夹 .claude（如已存在则跳过）
+在 .claude 文件夹中新建文件 settings.json
+将上述配置内容粘贴到文件中并保存
+方法二：环境变量
+
+如果不想使用配置文件，也可以通过环境变量配置：
+
+PowerShell 临时设置（当前会话）
+$env:ANTHROPIC_BASE_URL = "https://aicode.cat"
+$env:ANTHROPIC_AUTH_TOKEN = "你的API密钥"
+
+复制
+PowerShell 永久设置（用户级）
+[System.Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://aicode.cat", [System.EnvironmentVariableTarget]::User)
+[System.Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "你的API密钥", [System.EnvironmentVariableTarget]::User)
+
+复制
+验证环境变量
+$env:ANTHROPIC_BASE_URL
+$env:ANTHROPIC_AUTH_TOKEN
+
+复制
+
+WARNING
+
+请将"你的API密钥"替换为用户仪表盘中创建的实际密钥。
+
+重启提示
+
+配置完成后需要重启终端才能生效。如果在 VS Code / Cursor 等 IDE 的集成终端中使用，需要彻底重启整个 IDE（不只是重启终端），否则配置可能不会生效。
+
+VSCode 插件配置（可选）
+
+如果使用 VSCode 的 Claude 插件，需要额外配置插件认证文件：
+
+配置文件路径：
+
+C:\Users\<你的用户名>\.claude\config.json
+
+复制
+
+配置内容：
+
+{
+  "primaryApiKey": "any"
+}
+
+复制
+
+创建步骤
+
+打开文件资源管理器，进入 C:\Users\<你的用户名>\.claude\ 目录
+如果 .claude 文件夹不存在，请先创建（参考上面的方法一）
+在 .claude 文件夹中新建文件 config.json
+将上述配置内容粘贴到文件中并保存
+
+WARNING
+
+注意：这是 VSCode 插件专用的配置文件（config.json），与 Claude Code 命令行工具的配置文件（settings.json）是两个不同的文件。
+
+4. 开始使用
+claude
+
+复制
+
+可运行 claude --help 查看支持的命令。
+
+5. 常见问题排查
+问题 1：Unable to con
+------------
+
