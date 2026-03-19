@@ -2,8 +2,8 @@ export default {
   // Home Page
   home: {
     viewOnGithub: '在 GitHub 上查看',
-    viewDocs: '查看文档',
-    docs: '文档',
+    viewDocs: '使用文档',
+    docs: '支持文档',
     switchToLight: '切换到浅色模式',
     switchToDark: '切换到深色模式',
     dashboard: '控制台',
@@ -11,103 +11,220 @@ export default {
     getStarted: '立即开始',
     goToDashboard: '进入控制台',
     // 新增：面向用户的价值主张
-    heroSubtitle: '一个密钥，畅用多个 AI 模型',
-    heroDescription: '无需管理多个订阅账号，一站式接入 Claude、GPT、Gemini 等主流 AI 服务',
+    heroSubtitle: '下一代极客专属的统一 AI 算力引擎',
+    heroDescription: '打碎模型孤岛与昂贵的订阅藩篱。只需一次接入，即可全量解锁 OpenAI、Anthropic、Google 旗舰大模型，以无与伦比的高并发和极速响应为您赋能。在您的编辑器中畅享心流级代码生成体验。',
     tags: {
-      subscriptionToApi: '订阅转 API',
-      stickySession: '会话保持',
-      realtimeBilling: '按量计费'
+      subscriptionToApi: '高速稳定',
+      stickySession: '按月计费',
+      realtimeBilling: '高并发支持'
     },
     // 用户痛点区块
     painPoints: {
-      title: '你是否也遇到这些问题？',
+      title: '您是否也遇到这些问题？',
       items: {
         expensive: {
-          title: '订阅费用高',
-          desc: '每个 AI 服务都要单独订阅，每月支出越来越多'
+          title: '原版订阅太昂贵',
+          desc: '每个 AI 生态都要单独订阅，月级开支让个人难以承受'
         },
         complex: {
-          title: '多账号难管理',
-          desc: '不同平台的账号、密钥分散各处，管理起来很麻烦'
+          title: '网络门槛高',
+          desc: '受限于网络审查，经常出现被封号、连不上的尴尬情况'
         },
         unstable: {
-          title: '服务不稳定',
-          desc: '单一账号容易触发限制，影响正常使用'
+          title: '开发不够专注',
+          desc: 'API调用经常限流中断，排查问题浪费时间，无法专注开发'
         },
         noControl: {
-          title: '用量无法控制',
-          desc: '不知道钱花在哪了，也无法限制团队成员的使用'
+          title: '缺乏一站式管理',
+          desc: '同时使用多个软件却无法统一调度余额和上下文，效率变慢'
         }
       }
     },
     // 解决方案区块
     solutions: {
-      title: '我们帮你解决',
-      subtitle: '简单三步，开始省心使用 AI'
+      title: '选择 Pingjoku 的理由',
+      subtitle: '更便宜，更稳定，只为更好的你'
     },
     features: {
-      unifiedGateway: '一键接入',
-      unifiedGatewayDesc: '获取一个 API 密钥，即可调用所有已接入的 AI 模型，无需分别申请。',
-      multiAccount: '稳定可靠',
-      multiAccountDesc: '智能调度多个上游账号，自动切换和负载均衡，告别频繁报错。',
-      balanceQuota: '用多少付多少',
-      balanceQuotaDesc: '按实际使用量计费，支持设置配额上限，团队用量一目了然。'
+      sectionTitle: '超越想象的极致性能',
+      sectionDesc: '每一行代码的流式输出，每一次上下文的解析，都经过深度优化。我们不仅提供接口，更是重塑了完整的调用体验。',
+      unifiedGateway: '全域聚合，一键掌控',
+      unifiedGatewayDesc: '无需在众多模型厂商间疲于奔命。仅需一枚 Pingjoku 密钥，瞬间无缝接入全网最尖端的 AI 矩阵，立即融入您的现有开发流。',
+      multiAccount: '工业级企业并发池',
+      multiAccountDesc: '底座采用动态智能路由与多账号高速轮询，无惧高频并发请求。即便是全库代码的深度检索与疯狂重构，表现依然坚如磐石。',
+      balanceQuota: '告别焦虑，透明畅享',
+      balanceQuotaDesc: '彻底甩掉传统 API“按量计费”的账单刺客陷阱。包月订阅辅以极其充沛的调度配额，让您随心所欲犯错，肆无忌惮创造。',
+      smartRouting: '毫秒级的边缘直连',
+      smartRoutingDesc: '全球高优骨干网络部署专线加速节点。零感知智能多轨路由避开一切拥堵死角，打断您编写代码思路的，只能是您的咖啡。'
     },
     // 优势对比
     comparison: {
-      title: '为什么选择我们？',
+      title: '为什么说我们是更好的选择？',
       headers: {
         feature: '对比项',
-        official: '官方订阅',
-        us: '本平台'
+        official: '其他平台',
+        us: 'Pingjoku'
       },
       items: {
         pricing: {
           feature: '付费方式',
-          official: '固定月费，用不完也付',
-          us: '按量付费，用多少付多少'
+          official: '计量计费，套路多消耗不可控',
+          us: '透明月付，按需自由挑选'
         },
         models: {
-          feature: '模型选择',
-          official: '单一服务商',
-          us: '多模型随意切换'
+          feature: '集成广度',
+          official: '多为单一厂商代理',
+          us: '多商户汇聚，随意切换'
         },
         management: {
-          feature: '账号管理',
-          official: '每个服务单独管理',
-          us: '统一密钥，一站管理'
+          feature: '生态支持',
+          official: '常常不兼容新型编程辅助',
+          us: '无缝集成 OpenCode'
         },
         stability: {
-          feature: '服务稳定性',
-          official: '单账号易触发限制',
-          us: '多账号池，自动切换'
+          feature: '系统设计',
+          official: '频发单点故障',
+          us: '智能动态调度系统'
         },
         control: {
-          feature: '用量控制',
-          official: '无法限制',
-          us: '可设配额、查明细'
+          feature: '风控对抗',
+          official: '频频遇到官方封锁导致断连',
+          us: '100%保证可用无忧'
         }
       }
     },
     providers: {
       title: '已支持的 AI 模型',
-      description: '一个 API，多种选择',
+      description: '一个 API，涵盖全球顶尖智慧',
       supported: '已支持',
-      soon: '即将推出',
-      claude: 'Claude',
-      gemini: 'Gemini',
-      antigravity: 'Antigravity',
-      more: '更多'
+      soon: '新版模型首发',
+      claude: 'Codex (代码生成极速通道)',
+      gemini: 'ChatGPT (包含所有通用模型)',
+      antigravity: 'GPT-5.4 (独家核心极速版)',
+      more: '以及上百款其他大语言模型'
     },
     // CTA 区块
     cta: {
-      title: '准备好开始了吗？',
-      description: '注册即可获得免费试用额度，体验一站式 AI 服务',
-      button: '免费注册'
+      title: '即刻解锁真正的赛博原力',
+      description: '别再让糟糕的网络延迟卡顿和昂贵的账单束缚您的创造力。只需一分钟，加入精英开发者的行列。',
+      button: '立刻掌控全局模型'
+    },
+    stats: {
+      modelsValue: '100+',
+      modelsLabel: '可调用的AI模型',
+      uptimeValue: '99.99%',
+      uptimeLabel: '保障可用性',
+      latencyValue: '<50ms',
+      latencyLabel: '平均处理延迟',
+      providersValue: '10+',
+      providersLabel: '全球优质供应商'
+    },
+    faq: {
+      title: '洞悉一切，卸下顾虑',
+      subtitle: '绝对透明、零套路编织的保障网，只为您专注开发铺平道路。',
+      q1: 'Pingjoku 的订阅档位能满足我的开发需求吗？',
+      a1: '完全足够！即使是最低的 49¥/月档位，也提供了每日 30$（相当于5000万 token 的庞大计算量），周限 120$。而更高级别的套餐，针对需要大规模代码检索、重构或是多开 IDE 开发的重度开发者，提供了最高达 199¥/月（日限 180$，相当于3亿 token）的无忧畅享用量，保证您无需为使用过度而担忧。',
+      q2: '你们支持哪些平台和工具？',
+      a2: '我们高度兼容主流的 AI 开发环境！Pingjoku 可丝滑接入到 OpenCode、OpenClaw，以及各种兼容 OpenAI API 协议格式的开源工具、桌面客户端和插件中。无论是代码生成还是对话，均可无缝工作。不过请注意，目前我们【不支持 Claude Code】官方客户端的集成，请使用其它更优的替代方案。',
+      q3: '和按照按量付费(Pay-as-you-go)相比有什么优势？',
+      a3: '传统的按量付费非常容易因为一次错误的代码库扫描（Context 暴增）而扣除巨额费用，让您的账单不可控。Pingjoku 的月费制订阅方案通过预设极为充裕的日限、周限额度，完美解决了这种“账单焦虑”。所有的花销清清楚楚，而且在我们的包天/包周限额机制内可以尽情发挥、任意试错请求！',
+      q4: '代码数据安全吗？会不会被泄露？',
+      a4: '绝对安全。Pingjoku 仅仅作为您的代理请求网关，只处理数据的中转加密与快速投递。我们不会存储、审查和使用您的任何代码与对话数据。同时我们的上游请求链路都经过多重加密与匿名化拆分，防止您的企业或私人代码从模型服务商处遭受潜在的数据跟踪。',
+      q5: '如果遇到某个模型偶尔服务不可用怎么办？',
+      a5: 'Pingjoku 的一大特色就是强大的“多轨路由架构”。如果某个 AI 模型的官方 API 出现偶发性延迟过高甚至宕机，我们后端的调度器会在毫秒级尝试使用备用通道响应。极大限度避免出现影响终端体验的情形发生。',
+      q6: '我怎样查阅接入和使用的技术文档？',
+      a6: '您可以直接查阅右上角导航栏中的【支持文档】。文档涵盖了多种IDE配置方法、Curl基础调用指令以及如何在 OpenCode 与 OpenClaw 中绑定设置 Pingjoku 以实现全自动化编码的内容。'
     },
     footer: {
-      allRightsReserved: '保留所有权利。'
+      allRightsReserved: 'Pingjoku 保留所有权利。'
     }
+  },
+
+  // 公共导航
+  publicNav: {
+    home: '首页',
+    pricing: '订阅价格',
+    models: '模型列表',
+    docs: '支持文档' // NEW
+  },
+
+  // 公共底部
+  publicFooter: {
+    tagline: 'Pingjoku - 您最出色的 AI 编程加速器',
+    product: '产品',
+    resources: '文档与资源',
+    account: '您的账户',
+    keyUsage: '限额查询',
+    register: '立即注册'
+  },
+
+  // 套餐页面
+  pricing: {
+    title: '订阅方案',
+    subtitle: '所有价位均支持所有模型调用。',
+    popular: '热门推荐',
+    rateMultiplier: '速率',
+    manage: '升级管理',
+    getStarted: '立即开始',
+    noPlans: '暂无可用套餐。',
+    customTitle: '需要更大的额度需求？',
+    customDesc: '为您的团队部署专属代理节点，支持更大吞吐量。',
+    contactUs: '联系客服',
+    feature: {
+      platform: '架构：{platform}',
+      rate: '并发等级：{rate}x',
+      dailyLimit: '日限额：${limit}',
+      monthlyLimit: '月限额：${limit}',
+      subscription: '订阅制访问',
+      standard: '标准访问'
+    },
+    defaultPlans: {
+      basic: {
+        name: '入门版',
+        desc: '基础开发助手',
+        rateDisplay: '49¥',
+        rateUnit: '/月',
+        f1: '日限30$ (约5000万token)',
+        f2: '周限120$',
+        f3: '支持第三方平台工具',
+        f4: '可在 OpenCode、OpenClaw 使用',
+        f5: '不支持 Claude Code'
+      },
+      pro: {
+        name: '进阶版',
+        desc: '高频重度开发者',
+        rateDisplay: '99¥',
+        rateUnit: '/月',
+        f1: '日限75$ (约1.2亿token)',
+        f2: '周限300$',
+        f3: '支持第三方平台工具',
+        f4: '可在 OpenCode、OpenClaw 使用',
+        f5: '不支持 Claude Code'
+      },
+      enterprise: {
+        name: '畅享版',
+        desc: '全自动化/企业级架构',
+        rateDisplay: '199¥',
+        rateUnit: '/月',
+        f1: '日限180$ (约3亿token)',
+        f2: '周限720$',
+        f3: '支持第三方平台工具',
+        f4: '可在 OpenCode、OpenClaw 使用',
+        f5: '不支持 Claude Code'
+      }
+    }
+  },
+
+  // 模型价格页面
+  models: {
+    title: '模型价格',
+    subtitle: '所有支持模型的透明定价，价格以每 100 万 token 计。',
+    all: '全部',
+    model: '模型',
+    provider: '供应商',
+    inputPrice: '输入价格',
+    outputPrice: '输出价格',
+    disclaimer: '实际价格可能因您的套餐和倍率而有所不同，显示的为基准价格。'
   },
 
   // Key Usage Query Page
@@ -182,8 +299,8 @@ export default {
 
   // Setup Wizard
   setup: {
-    title: 'Sub2API 安装向导',
-    description: '配置您的 Sub2API 实例',
+    title: 'Pingjoku 安装向导',
+    description: '配置您的 Pingjoku 实例',
     database: {
       title: '数据库配置',
       description: '连接到您的 PostgreSQL 数据库',
@@ -1852,7 +1969,7 @@ export default {
         antigravityOauth: 'Antigravity OAuth',
         antigravityApikey: '通过 Base URL + API Key 连接',
         soraApiKey: 'API Key / 上游透传',
-        soraApiKeyHint: '连接另一个 Sub2API 或兼容 API',
+        soraApiKeyHint: '连接另一个 Pingjoku 或兼容 API',
         soraBaseUrlRequired: 'Sora apikey 账号必须设置上游地址（Base URL）',
         soraBaseUrlInvalidScheme: 'Base URL 必须以 http:// 或 https:// 开头',
         upstream: '对接上游',
@@ -2540,7 +2657,7 @@ export default {
       selectTestModel: '选择测试模型',
       testModel: '测试模型',
       testPrompt: '提示词："hi"',
-      soraUpstreamBaseUrlHint: '上游 Sora 服务地址（另一个 Sub2API 实例或兼容 API）',
+      soraUpstreamBaseUrlHint: '上游 Sora 服务地址（另一个 Pingjoku 实例或兼容 API）',
       soraTestHint: 'Sora 测试将执行连通性与能力检测（/backend/me、订阅信息、Sora2 邀请码与剩余额度）。',
       soraTestTarget: '检测目标：Sora 账号能力',
       soraTestMode: '模式：连通性 + 能力探测',
@@ -3929,7 +4046,7 @@ export default {
       },
       linuxdo: {
         title: 'LinuxDo Connect 登录',
-        description: '配置 LinuxDo Connect OAuth，用于 Sub2API 用户登录',
+        description: '配置 LinuxDo Connect OAuth，用于 Pingjoku 用户登录',
         enable: '启用 LinuxDo 登录',
         enableHint: '在登录/注册页面显示 LinuxDo 登录入口',
         clientId: 'Client ID',
@@ -3979,7 +4096,7 @@ export default {
         description: '自定义站点品牌',
         siteName: '站点名称',
         siteNameHint: '显示在邮件和页面标题中',
-        siteNamePlaceholder: 'Sub2API',
+        siteNamePlaceholder: 'Pingjoku',
         siteSubtitle: '站点副标题',
         siteSubtitleHint: '显示在登录和注册页面',
         siteSubtitlePlaceholder: '订阅转 API 转换平台',
@@ -4068,7 +4185,7 @@ export default {
         fromEmail: '发件人邮箱',
         fromEmailPlaceholder: "noreply{'@'}example.com",
         fromName: '发件人名称',
-        fromNamePlaceholder: 'Sub2API',
+        fromNamePlaceholder: 'Pingjoku',
         useTls: '使用 TLS',
         useTlsHint: '为 SMTP 连接启用 TLS 加密'
       },
@@ -4423,16 +4540,16 @@ export default {
     // Admin tour steps
     admin: {
       welcome: {
-        title: '👋 欢迎使用 Sub2API',
+        title: '👋 欢迎使用 Pingjoku',
         description:
-          '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">Sub2API 是一个强大的 AI 服务中转平台，让您轻松管理和分发 AI 服务。</p><p style="margin-bottom: 12px;"><b>🎯 核心功能：</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>📦 <b>分组管理</b> - 创建不同的服务套餐（VIP、免费试用等）</li><li>🔗 <b>账号池</b> - 连接多个上游 AI 服务商账号</li><li>🔑 <b>密钥分发</b> - 为用户生成独立的 API Key</li><li>💰 <b>计费管理</b> - 灵活的费率和配额控制</li></ul><p style="color: #10b981; font-weight: 600;">接下来，我们将用 3 分钟带您完成首次配置 →</p></div>',
+          '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">Pingjoku 是一个强大的 AI 服务中转平台，让您轻松管理和分发 AI 服务。</p><p style="margin-bottom: 12px;"><b>🎯 核心功能：</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>📦 <b>分组管理</b> - 创建不同的服务套餐（VIP、免费试用等）</li><li>🔗 <b>账号池</b> - 连接多个上游 AI 服务商账号</li><li>🔑 <b>密钥分发</b> - 为用户生成独立的 API Key</li><li>💰 <b>计费管理</b> - 灵活的费率和配额控制</li></ul><p style="color: #10b981; font-weight: 600;">接下来，我们将用 3 分钟带您完成首次配置 →</p></div>',
         nextBtn: '开始配置 🚀',
         prevBtn: '跳过'
       },
       groupManage: {
         title: '📦 第一步：分组管理',
         description:
-          '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;"><b>什么是分组？</b></p><p style="margin-bottom: 12px;">分组是 Sub2API 的核心概念，它就像一个"服务套餐"：</p><ul style="margin-left: 20px; margin-bottom: 12px; font-size: 13px;"><li>🎯 每个分组可以包含多个上游账号</li><li>💰 每个分组有独立的计费倍率</li><li>👥 可以设置为公开或专属分组</li></ul><p style="margin-top: 12px; padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;"><b>💡 示例：</b>您可以创建"VIP专线"（高倍率）和"免费试用"（低倍率）两个分组</p><p style="margin-top: 16px; color: #10b981; font-weight: 600;">👉 点击左侧的"分组管理"开始</p></div>'
+          '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;"><b>什么是分组？</b></p><p style="margin-bottom: 12px;">分组是 Pingjoku 的核心概念，它就像一个"服务套餐"：</p><ul style="margin-left: 20px; margin-bottom: 12px; font-size: 13px;"><li>🎯 每个分组可以包含多个上游账号</li><li>💰 每个分组有独立的计费倍率</li><li>👥 可以设置为公开或专属分组</li></ul><p style="margin-top: 12px; padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;"><b>💡 示例：</b>您可以创建"VIP专线"（高倍率）和"免费试用"（低倍率）两个分组</p><p style="margin-top: 16px; color: #10b981; font-weight: 600;">👉 点击左侧的"分组管理"开始</p></div>'
       },
       createGroup: {
         title: '➕ 创建新分组',
@@ -4544,9 +4661,9 @@ export default {
     // User tour steps
     user: {
       welcome: {
-        title: '👋 欢迎使用 Sub2API',
+        title: '👋 欢迎使用 Pingjoku',
         description:
-          '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">您好！欢迎来到 Sub2API AI 服务平台。</p><p style="margin-bottom: 12px;"><b>🎯 快速开始：</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>🔑 创建 API 密钥</li><li>📋 复制密钥到您的应用</li><li>🚀 开始使用 AI 服务</li></ul><p style="color: #10b981; font-weight: 600;">只需 1 分钟，让我们开始吧 →</p></div>',
+          '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">您好！欢迎来到 Pingjoku AI 服务平台。</p><p style="margin-bottom: 12px;"><b>🎯 快速开始：</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>🔑 创建 API 密钥</li><li>📋 复制密钥到您的应用</li><li>🚀 开始使用 AI 服务</li></ul><p style="color: #10b981; font-weight: 600;">只需 1 分钟，让我们开始吧 →</p></div>',
         nextBtn: '开始 🚀',
         prevBtn: '跳过'
       },

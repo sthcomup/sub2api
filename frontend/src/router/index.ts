@@ -1,5 +1,5 @@
 /**
- * Vue Router configuration for Sub2API frontend
+ * Vue Router configuration for Pingjoku frontend
  * Defines all application routes with lazy loading and navigation guards
  */
 
@@ -103,12 +103,41 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
+    path: '/pricing',
+    name: 'Pricing',
+    component: () => import('@/views/PricingView.vue'),
+    meta: {
+      requiresAuth: false,
+      title: 'Pricing',
+      titleKey: 'pricing.title'
+    }
+  },
+  {
+    path: '/models',
+    name: 'Models',
+    component: () => import('@/views/ModelsView.vue'),
+    meta: {
+      requiresAuth: false,
+      title: 'Model Pricing',
+      titleKey: 'models.title'
+    }
+  },
+  {
     path: '/key-usage',
     name: 'KeyUsage',
     component: () => import('@/views/KeyUsageView.vue'),
     meta: {
       requiresAuth: false,
       title: 'Key Usage',
+    }
+  },
+  {
+    path: '/docs',
+    name: 'Docs',
+    component: () => import('@/views/DocsView.vue'),
+    meta: {
+      requiresAuth: false,
+      title: 'Documentation',
     }
   },
 
@@ -446,7 +475,7 @@ router.beforeEach((to, _from, next) => {
     const menuItem = publicItems.find((item) => item.id === id)
       ?? (authStore.isAdmin ? adminSettingsStore.customMenuItems.find((item) => item.id === id) : undefined)
     if (menuItem?.label) {
-      const siteName = appStore.siteName || 'Sub2API'
+      const siteName = appStore.siteName || 'Pingjoku'
       document.title = `${menuItem.label} - ${siteName}`
     } else {
       document.title = resolveDocumentTitle(to.meta.title, appStore.siteName, to.meta.titleKey as string)

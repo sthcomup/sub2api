@@ -413,8 +413,8 @@ onMounted(() => {
 }
 
 .sora-creator-bar-inner.focused {
-  border-color: var(--sora-accent-primary, #14b8a6);
-  box-shadow: 0 0 0 1px var(--sora-accent-primary, #14b8a6), var(--sora-shadow-glow, 0 0 20px rgba(20,184,166,0.3));
+  border-color: var(--sora-accent-primary, #3b82f6);
+  box-shadow: 0 0 0 1px var(--sora-accent-primary, #3b82f6), var(--sora-shadow-glow, 0 0 20px rgba(59,130,246,0.3));
 }
 
 /* 模型选择行 */
@@ -448,7 +448,7 @@ onMounted(() => {
 }
 
 .sora-model-select:focus {
-  border-color: var(--sora-accent-primary, #14b8a6);
+  border-color: var(--sora-accent-primary, #3b82f6);
   outline: none;
 }
 
@@ -596,9 +596,9 @@ onMounted(() => {
 }
 
 .sora-tool-btn.active {
-  background: rgba(20, 184, 166, 0.15);
-  color: var(--sora-accent-primary, #14b8a6);
-  border: 1px solid rgba(20, 184, 166, 0.3);
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--sora-accent-primary, #3b82f6);
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .sora-tool-btn-icon {
@@ -640,12 +640,12 @@ onMounted(() => {
   align-items: center;
   gap: 6px;
   padding: 4px 12px;
-  background: rgba(20, 184, 166, 0.12);
-  border: 1px solid rgba(20, 184, 166, 0.25);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
   border-radius: var(--sora-radius-full, 9999px);
   font-size: 12px;
   font-weight: 500;
-  color: var(--sora-accent-primary, #14b8a6);
+  color: var(--sora-accent-primary, #3b82f6);
   white-space: nowrap;
   animation: sora-fade-in 0.3s ease;
 }
@@ -654,7 +654,7 @@ onMounted(() => {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--sora-accent-primary, #14b8a6);
+  background: var(--sora-accent-primary, #3b82f6);
   animation: sora-pulse-dot 1.5s ease-in-out infinite;
 }
 
@@ -674,7 +674,7 @@ onMounted(() => {
   align-items: center;
   gap: 6px;
   padding: 8px 24px;
-  background: var(--sora-accent-gradient, linear-gradient(135deg, #14b8a6, #0d9488));
+  background: var(--sora-accent-gradient, linear-gradient(135deg, #3b82f6, #2563eb));
   border-radius: var(--sora-radius-full, 9999px);
   font-size: 13px;
   font-weight: 600;
@@ -686,8 +686,8 @@ onMounted(() => {
 }
 
 .sora-generate-btn:hover:not(:disabled) {
-  background: var(--sora-accent-gradient-hover, linear-gradient(135deg, #2dd4bf, #14b8a6));
-  box-shadow: var(--sora-shadow-glow, 0 0 20px rgba(20,184,166,0.3));
+  background: var(--sora-accent-gradient-hover, linear-gradient(135deg, #60a5fa, #3b82f6));
+  box-shadow: var(--sora-shadow-glow, 0 0 20px rgba(59,130,246,0.3));
   transform: translateY(-1px);
 }
 

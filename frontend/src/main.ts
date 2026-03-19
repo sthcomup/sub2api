@@ -7,11 +7,8 @@ import { useAppStore } from '@/stores/app'
 import './style.css'
 
 function initThemeClass() {
-  const savedTheme = localStorage.getItem('theme')
-  const shouldUseDark =
-    savedTheme === 'dark' ||
-    (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  document.documentElement.classList.toggle('dark', shouldUseDark)
+  document.documentElement.classList.add('dark')
+  localStorage.setItem('theme', 'dark')
 }
 
 async function bootstrap() {
@@ -28,7 +25,7 @@ async function bootstrap() {
   appStore.initFromInjectedConfig()
 
   // Set document title immediately after config is loaded
-  if (appStore.siteName && appStore.siteName !== 'Sub2API') {
+  if (appStore.siteName && appStore.siteName !== 'Pingjoku') {
     document.title = `${appStore.siteName} - AI API Gateway`
   }
 

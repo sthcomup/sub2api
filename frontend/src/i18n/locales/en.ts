@@ -46,12 +46,16 @@ export default {
       subtitle: 'Three simple steps to stress-free AI access'
     },
     features: {
+      sectionTitle: 'Why Choose Us',
+      sectionDesc: 'Enterprise-grade AI gateway with simplicity built in',
       unifiedGateway: 'One-Click Access',
       unifiedGatewayDesc: 'Get a single API key to call all connected AI models. No separate applications needed.',
       multiAccount: 'Always Reliable',
       multiAccountDesc: 'Smart routing across multiple upstream accounts with automatic failover. Say goodbye to errors.',
       balanceQuota: 'Pay What You Use',
-      balanceQuotaDesc: 'Usage-based billing with quota limits. Full visibility into team consumption.'
+      balanceQuotaDesc: 'Usage-based billing with quota limits. Full visibility into team consumption.',
+      smartRouting: 'Smart Routing',
+      smartRoutingDesc: 'Intelligent model routing and load balancing across providers. Automatic fallback on failures.'
     },
     // Comparison section
     comparison: {
@@ -105,9 +109,111 @@ export default {
       description: 'Sign up now and get free trial credits to experience seamless AI access',
       button: 'Sign Up Free'
     },
+    stats: {
+      modelsValue: '20+',
+      modelsLabel: 'AI Models Supported',
+      uptimeValue: '99.9%',
+      uptimeLabel: 'Uptime SLA',
+      latencyValue: '<100ms',
+      latencyLabel: 'Avg Routing Latency',
+      providersValue: '4+',
+      providersLabel: 'Providers Integrated'
+    },
+    faq: {
+      title: 'Frequently Asked Questions',
+      subtitle: 'Everything you need to know about our platform',
+      q1: 'How does the API gateway work?',
+      a1: 'Our gateway provides a unified OpenAI-compatible API endpoint. You get a single API key that routes requests to multiple upstream AI providers (Claude, GPT, Gemini, etc.) with automatic load balancing and failover.',
+      q2: 'What AI models are supported?',
+      a2: 'We support Claude (Anthropic), GPT (OpenAI), Gemini (Google), and more. New models are added regularly. Check our Models page for the full list and pricing.',
+      q3: 'How is billing calculated?',
+      a3: 'Billing is usage-based — you only pay for the tokens you consume. Each model has its own input/output token pricing, and you can set daily/weekly/monthly spending limits.',
+      q4: 'Is my data secure?',
+      a4: 'Yes. We do not store or log your conversation content. API requests are proxied directly to upstream providers. All connections use TLS encryption.',
+      q5: 'Can I use this with existing tools?',
+      a5: 'Absolutely. Our API is fully compatible with the OpenAI API format, so it works with any tool that supports OpenAI — including Cursor, Continue, ChatGPT clients, and more.',
+      q6: 'What happens if an upstream provider is down?',
+      a6: 'Our smart routing system automatically detects failures and switches to healthy upstream accounts. With multiple accounts in the pool, single points of failure are eliminated.'
+    },
     footer: {
       allRightsReserved: 'All rights reserved.'
     }
+  },
+
+  // Public Navigation
+  publicNav: {
+    home: 'Home',
+    pricing: 'Pricing',
+    models: 'Models'
+  },
+
+  // Public Footer
+  publicFooter: {
+    tagline: 'Unified AI API gateway platform. One key, all models.',
+    product: 'Product',
+    resources: 'Resources',
+    account: 'Account',
+    keyUsage: 'Key Usage Query',
+    register: 'Sign Up'
+  },
+
+  // Pricing Page
+  pricing: {
+    title: 'Pricing Plans',
+    subtitle: 'Choose the plan that fits your needs. All plans include access to our full model lineup.',
+    popular: 'Popular',
+    rateMultiplier: 'rate multiplier',
+    manage: 'Manage Plan',
+    getStarted: 'Get Started',
+    noPlans: 'No plans available at the moment.',
+    customTitle: 'Need a Custom Plan?',
+    customDesc: 'Contact us for enterprise pricing with dedicated support and custom rate limits.',
+    contactUs: 'Contact Us',
+    feature: {
+      platform: 'Platform: {platform}',
+      rate: 'Rate multiplier: {rate}x',
+      dailyLimit: 'Daily limit: ${limit}',
+      monthlyLimit: 'Monthly limit: ${limit}',
+      subscription: 'Subscription-based access',
+      standard: 'Standard access'
+    },
+    defaultPlans: {
+      basic: {
+        name: 'Basic',
+        desc: 'For individuals getting started',
+        f1: 'Access to all standard models',
+        f2: 'Pay-as-you-go billing',
+        f3: 'Community support'
+      },
+      pro: {
+        name: 'Pro',
+        desc: 'For professionals and small teams',
+        f1: 'Access to all models including premium',
+        f2: 'Priority routing & lower latency',
+        f3: 'Higher rate limits',
+        f4: 'Email support'
+      },
+      enterprise: {
+        name: 'Enterprise',
+        desc: 'For organizations with custom needs',
+        f1: 'Discounted rate (0.8x multiplier)',
+        f2: 'Dedicated account pool',
+        f3: 'Custom quota configuration',
+        f4: 'Priority support'
+      }
+    }
+  },
+
+  // Models Page
+  models: {
+    title: 'Model Pricing',
+    subtitle: 'Transparent pricing for all supported AI models. Prices shown are per 1M tokens.',
+    all: 'All',
+    model: 'Model',
+    provider: 'Provider',
+    inputPrice: 'Input Price',
+    outputPrice: 'Output Price',
+    disclaimer: 'Prices may vary based on your plan and rate multiplier. Shown prices are base rates.'
   },
 
   // Key Usage Query Page
@@ -182,8 +288,8 @@ export default {
 
   // Setup Wizard
   setup: {
-    title: 'Sub2API Setup',
-    description: 'Configure your Sub2API instance',
+    title: 'Pingjoku Setup',
+    description: 'Configure your Pingjoku instance',
     database: {
       title: 'Database Configuration',
       description: 'Connect to your PostgreSQL database',
@@ -1689,7 +1795,7 @@ export default {
         antigravityOauth: 'Antigravity OAuth',
         antigravityApikey: 'Connect via Base URL + API Key',
         soraApiKey: 'API Key / Upstream',
-        soraApiKeyHint: 'Connect to another Sub2API or compatible API',
+        soraApiKeyHint: 'Connect to another Pingjoku or compatible API',
         soraBaseUrlRequired: 'Sora API Key account requires a Base URL',
         soraBaseUrlInvalidScheme: 'Base URL must start with http:// or https://',
         upstream: 'Upstream',
@@ -2412,7 +2518,7 @@ export default {
       selectTestModel: 'Select Test Model',
       testModel: 'Test model',
       testPrompt: 'Prompt: "hi"',
-      soraUpstreamBaseUrlHint: 'Upstream Sora service URL (another Sub2API instance or compatible API)',
+      soraUpstreamBaseUrlHint: 'Upstream Sora service URL (another Pingjoku instance or compatible API)',
       soraTestHint: 'Sora test runs connectivity and capability checks (/backend/me, subscription, Sora2 invite and remaining quota).',
       soraTestTarget: 'Target: Sora account capability',
       soraTestMode: 'Mode: Connectivity + Capability checks',
@@ -3754,7 +3860,7 @@ export default {
         secretKeyConfiguredHint: 'Secret key configured. Leave empty to keep the current value.'      },
       linuxdo: {
         title: 'LinuxDo Connect Login',
-        description: 'Configure LinuxDo Connect OAuth for Sub2API end-user login',
+        description: 'Configure LinuxDo Connect OAuth for Pingjoku end-user login',
         enable: 'Enable LinuxDo Login',
         enableHint: 'Show LinuxDo login on the login/register pages',
         clientId: 'Client ID',
@@ -3806,7 +3912,7 @@ export default {
         title: 'Site Settings',
         description: 'Customize site branding',
         siteName: 'Site Name',
-        siteNamePlaceholder: 'Sub2API',
+        siteNamePlaceholder: 'Pingjoku',
         siteNameHint: 'Displayed in emails and page titles',
         siteSubtitle: 'Site Subtitle',
         siteSubtitlePlaceholder: 'Subscription to API Conversion Platform',
@@ -3894,7 +4000,7 @@ export default {
         fromEmail: 'From Email',
         fromEmailPlaceholder: "noreply{'@'}example.com",
         fromName: 'From Name',
-        fromNamePlaceholder: 'Sub2API',
+        fromNamePlaceholder: 'Pingjoku',
         useTls: 'Use TLS',
         useTlsHint: 'Enable TLS encryption for SMTP connection'
       },
@@ -4252,14 +4358,14 @@ export default {
     // Admin tour steps
     admin: {
       welcome: {
-        title: '👋 Welcome to Sub2API',
-        description: '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">Sub2API is a powerful AI service gateway platform that helps you easily manage and distribute AI services.</p><p style="margin-bottom: 12px;"><b>🎯 Core Features:</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>📦 <b>Group Management</b> - Create service tiers (VIP, Free Trial, etc.)</li><li>🔗 <b>Account Pool</b> - Connect multiple upstream AI service accounts</li><li>🔑 <b>Key Distribution</b> - Generate independent API Keys for users</li><li>💰 <b>Billing Control</b> - Flexible rate and quota management</li></ul><p style="color: #10b981; font-weight: 600;">Let\'s complete the initial setup in 3 minutes →</p></div>',
+        title: '👋 Welcome to Pingjoku',
+        description: '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">Pingjoku is a powerful AI service gateway platform that helps you easily manage and distribute AI services.</p><p style="margin-bottom: 12px;"><b>🎯 Core Features:</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>📦 <b>Group Management</b> - Create service tiers (VIP, Free Trial, etc.)</li><li>🔗 <b>Account Pool</b> - Connect multiple upstream AI service accounts</li><li>🔑 <b>Key Distribution</b> - Generate independent API Keys for users</li><li>💰 <b>Billing Control</b> - Flexible rate and quota management</li></ul><p style="color: #10b981; font-weight: 600;">Let\'s complete the initial setup in 3 minutes →</p></div>',
         nextBtn: 'Start Setup 🚀',
         prevBtn: 'Skip'
       },
       groupManage: {
         title: '📦 Step 1: Group Management',
-        description: '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;"><b>What is a Group?</b></p><p style="margin-bottom: 12px;">Groups are the core concept of Sub2API, like a "service package":</p><ul style="margin-left: 20px; margin-bottom: 12px; font-size: 13px;"><li>🎯 Each group can contain multiple upstream accounts</li><li>💰 Each group has independent billing multiplier</li><li>👥 Can be set as public or exclusive</li></ul><p style="margin-top: 12px; padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;"><b>💡 Example:</b> You can create "VIP Premium" (high rate) and "Free Trial" (low rate) groups</p><p style="margin-top: 16px; color: #10b981; font-weight: 600;">👉 Click "Group Management" on the left sidebar</p></div>'
+        description: '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;"><b>What is a Group?</b></p><p style="margin-bottom: 12px;">Groups are the core concept of Pingjoku, like a "service package":</p><ul style="margin-left: 20px; margin-bottom: 12px; font-size: 13px;"><li>🎯 Each group can contain multiple upstream accounts</li><li>💰 Each group has independent billing multiplier</li><li>👥 Can be set as public or exclusive</li></ul><p style="margin-top: 12px; padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;"><b>💡 Example:</b> You can create "VIP Premium" (high rate) and "Free Trial" (low rate) groups</p><p style="margin-top: 16px; color: #10b981; font-weight: 600;">👉 Click "Group Management" on the left sidebar</p></div>'
       },
       createGroup: {
         title: '➕ Create New Group',
@@ -4352,8 +4458,8 @@ export default {
     // User tour steps
     user: {
       welcome: {
-        title: '👋 Welcome to Sub2API',
-        description: '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">Hello! Welcome to the Sub2API AI service platform.</p><p style="margin-bottom: 12px;"><b>🎯 Quick Start:</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>🔑 Create API Key</li><li>📋 Copy key to your application</li><li>🚀 Start using AI services</li></ul><p style="color: #10b981; font-weight: 600;">Just 1 minute, let\'s get started →</p></div>',
+        title: '👋 Welcome to Pingjoku',
+        description: '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">Hello! Welcome to the Pingjoku AI service platform.</p><p style="margin-bottom: 12px;"><b>🎯 Quick Start:</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>🔑 Create API Key</li><li>📋 Copy key to your application</li><li>🚀 Start using AI services</li></ul><p style="color: #10b981; font-weight: 600;">Just 1 minute, let\'s get started →</p></div>',
         nextBtn: 'Start 🚀',
         prevBtn: 'Skip'
       },

@@ -374,7 +374,7 @@ onMounted(() => loadItems(1))
 }
 
 .sora-gallery-card-badge.video {
-  background: rgba(20, 184, 166, 0.8);
+  background: rgba(59, 130, 246, 0.8);
   color: white;
 }
 
@@ -509,7 +509,7 @@ onMounted(() => loadItems(1))
 .sora-gallery-empty-btn {
   margin-top: 24px;
   padding: 10px 28px;
-  background: var(--sora-accent-gradient, linear-gradient(135deg, #14b8a6, #0d9488));
+  background: var(--sora-accent-gradient, linear-gradient(135deg, #3b82f6, #2563eb));
   border-radius: var(--sora-radius-full, 9999px);
   font-size: 14px;
   font-weight: 500;
@@ -520,7 +520,7 @@ onMounted(() => loadItems(1))
 }
 
 .sora-gallery-empty-btn:hover {
-  box-shadow: var(--sora-shadow-glow, 0 0 20px rgba(20,184,166,0.3));
+  box-shadow: var(--sora-shadow-glow, 0 0 20px rgba(59,130,246,0.3));
 }
 
 /* 加载更多 */

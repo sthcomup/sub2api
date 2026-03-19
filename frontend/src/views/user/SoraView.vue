@@ -114,10 +114,10 @@ onMounted(async () => {
   --sora-text-secondary: #6B7280;
   --sora-text-tertiary: #9CA3AF;
   --sora-text-muted: #D1D5DB;
-  --sora-accent-primary: #14b8a6;
-  --sora-accent-secondary: #0d9488;
-  --sora-accent-gradient: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
-  --sora-accent-gradient-hover: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
+  --sora-accent-primary: #3b82f6;
+  --sora-accent-secondary: #2563eb;
+  --sora-accent-gradient: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  --sora-accent-gradient-hover: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
   --sora-success: #10B981;
   --sora-warning: #F59E0B;
   --sora-error: #EF4444;
@@ -132,7 +132,7 @@ onMounted(async () => {
   --sora-shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
   --sora-shadow-md: 0 4px 12px rgba(0,0,0,0.08);
   --sora-shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
-  --sora-shadow-glow: 0 0 20px rgba(20,184,166,0.25);
+  --sora-shadow-glow: 0 0 20px rgba(59,130,246,0.25);
   --sora-transition-fast: 150ms ease;
   --sora-transition-normal: 250ms ease;
   --sora-header-height: 56px;
@@ -361,7 +361,7 @@ html.dark .sora-root {
   --sora-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --sora-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
   --sora-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --sora-shadow-glow: 0 0 20px rgba(20, 184, 166, 0.3);
+  --sora-shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
   --sora-header-bg: rgba(2, 6, 23, 0.85);
   --sora-placeholder-gradient: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #020617 100%);
   --sora-modal-backdrop: rgba(0, 0, 0, 0.7);
