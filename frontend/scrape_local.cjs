@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const puppeteer = require('puppeteer');
 
 (async () => {
@@ -34,7 +35,7 @@ const puppeteer = require('puppeteer');
         let content = document.querySelector('.el-main') || document.querySelector('main') || document.body;
         return content.innerText;
      });
-     results[url] = !!text ? text : 'NO CONTENT';
+     results[url] = text || 'NO CONTENT';
   }
   
   console.log('\n--- PAGE CONTENTS ---');
